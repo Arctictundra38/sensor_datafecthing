@@ -7,16 +7,15 @@ int main(){
 	FILE *fp2;
 	fp=fopen("datain","r");
 	
-	char Chartab[80];
-	char Chartab2[80];
+	char Chararray[80];
 	int intarray[80];
 
-	fread(Chartab,80,8,fp);
+	fread(Chararray,80,8,fp);
    
 
 	for(int i=0;i<10;i++){
 
-		intarray[i]=atoi(&Chartab[8*i]); 
+		intarray[i]=atoi(&Chararray[8*i]); 
 	}
 	
 	
@@ -33,7 +32,7 @@ int main(){
 	
 	
 	for(int l=0;l<10;l++){
-		fprintf(fp,"%d\n",intarray[l]);	
+		fprintf(fp2,"%d\n",intarray[l]);	
 	}
 		
 	fclose(fp2);
